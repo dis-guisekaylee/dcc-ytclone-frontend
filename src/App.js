@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import CommentMapper from "./components/CommentMapper";
 
 function App() {
   const [comments, setComments] = useState([]);
@@ -16,9 +17,10 @@ function App() {
   }, []);
 
   return (
-      <div><ul>
-        {comments.map((comment) => <li key={comment._id}>{comment.text}</li>)}
-        </ul></div>
+      <div>
+
+        <CommentMapper comments={comments} />
+      </div>
       // <h1>Comments on Video "53dghhfg"</h1>
       // <button onClick={this.makeGetRequest()}>View Comments</button>
 

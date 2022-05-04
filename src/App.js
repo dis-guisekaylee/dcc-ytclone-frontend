@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CommentMapper from "./components/CommentMapper";
+import CommentForm from "./components/CommentForm";
 
 function App() {
   const [comments, setComments] = useState([]);
@@ -18,7 +19,7 @@ function App() {
 
   return (
       <div>
-
+        <CommentForm setComments={setComments} />
         <CommentMapper comments={comments} />
       </div>
       // <h1>Comments on Video "53dghhfg"</h1>
